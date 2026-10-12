@@ -1,0 +1,37 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.digitalmentes7-maker/gobuy-product-trust",
+  "title": "GoBuy Product Trust",
+  "description": "Marketplace-evidence trust scores for AI agents: a 0-100 Evidence Score with signal breakdown for Amazon, Walmart, Target, and Best Buy listings; storefront trust scores for any domain. Reference evaluator for GPV-1, the open pre-purchase verification spec (docs.gobuy.ai/standard).",
+  "version": "1.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.gobuy.ai/mcp"
+    }
+  ],
+  "tools": [
+    {
+      "name": "check_product_trust",
+      "description": "Evidence Score (0-100) and signal breakdown for one marketplace listing"
+    },
+    {
+      "name": "compare_products",
+      "description": "Inspect and rank 2-20 listings by evidence quality"
+    },
+    {
+      "name": "analyze_reviews",
+      "description": "Per-review forensics: integrity score, adjusted rating, suspicious-review flags"
+    },
+    {
+      "name": "check_store_score",
+      "description": "Store trust score and agent-readiness tier (A-D) for any storefront domain"
+    },
+    {
+      "name": "scan_store",
+      "description": "On-demand deep storefront scan"
+    }
+  ],
+  "website_url": "https://gobuy.ai",
+  "repository_url": "https://github.com/gobuy-ai/gobuy-mcp"
+}
